@@ -1,69 +1,190 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useState } from "react";
+import { Search, ChevronRight } from "lucide-react";
+import Link from "next/link";
+import { menuCategories } from "@/data/menu";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+  const [showSplash, setShowSplash] = useState(true);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, 1800);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const filteredCategories = menuCategories.filter((category) =>
+    category.name.toLowerCase().includes(search.toLowerCase())
+  );
+
+  // Splash Screen
+  if (showSplash) {
+    return (
+      <main className="fixed inset-0 z-50 flex min-h-screen items-center justify-center overflow-hidden bg-[#651719]">
+        <div className="flex animate-[fadeIn_0.8s_ease-out] flex-col items-center px-6 text-center">
+          {/* Logo */}
+          <div className="flex h-32 w-32 items-center justify-center rounded-full border-2 border-[#d6ad63] bg-white shadow-2xl">
+            <div className="text-center">
+              <p className="text-2xl font-black leading-none tracking-tight text-[#651719]">
+                MAX
+              </p>
+
+              <p className="mt-1 text-sm font-black tracking-[0.15em] text-[#651719]">
+                KITCHEN
+              </p>
+            </div>
+          </div>
+
+          {/* Restaurant Name */}
+          <h1 className="mt-7 text-3xl font-extrabold tracking-[0.12em] text-white">
+            MAX KITCHEN
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-2 text-sm tracking-[0.2em] text-[#e8c987]">
+            MULTI-CUISINE RESTAURANT
+          </p>
+
+          {/* Loading line */}
+          <div className="mt-8 h-1 w-20 overflow-hidden rounded-full bg-white/20">
+            <div className="h-full w-full origin-left animate-[loading_1.5s_ease-in-out] bg-[#d6ad63]" />
+          </div>
+        </div>
+
+        <style jsx>{`
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: scale(0.94);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+
+          @keyframes loading {
+            from {
+              transform: scaleX(0);
+            }
+            to {
+              transform: scaleX(1);
+            }
+          }
+        `}</style>
+      </main>
+    );
+  }
+
+  // Digital Menu
+  return (
+    <main className="min-h-screen bg-[#f8f5f0] text-[#24150f]">
+      {/* Header */}
+      <header className="bg-[#651719] px-5 pb-8 pt-8 text-center text-white">
+        <div className="mx-auto max-w-md">
+          <div className="mb-3 flex justify-center">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-[#d6ad63] bg-white shadow-lg">
+              <div className="text-center">
+                <p className="text-lg font-black leading-none text-[#651719]">
+                  MAX
+                </p>
+
+                <p className="mt-1 text-[9px] font-black tracking-[0.12em] text-[#651719]">
+                  KITCHEN
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h1 className="text-3xl font-extrabold tracking-wide">
+            MAX KITCHEN
+          </h1>
+
+          <p className="mt-1 text-sm text-[#e8c987]">
+            Multi-Cuisine Restaurant
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Content */}
+      <section className="mx-auto max-w-md px-4 py-5">
+        {/* Search */}
+        <div className="relative mb-6">
+          <Search
+            size={19}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+          />
+
+          <input
+            type="text"
+            placeholder="Search categories..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full rounded-2xl border border-gray-200 bg-white py-3.5 pl-11 pr-4 text-sm outline-none shadow-sm transition focus:border-[#a77a32]"
+          />
         </div>
-      </main>
-    </div>
+
+        {/* Heading */}
+        <div className="mb-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#a77a32]">
+            Explore
+          </p>
+
+          <h2 className="mt-1 text-2xl font-bold">
+            Menu Categories
+          </h2>
+        </div>
+
+        {/* Categories */}
+        <div className="space-y-3">
+          {filteredCategories.map((category) => (
+            <Link
+              key={category.id}
+              href={`/menu/${category.id}`}
+              className="group flex w-full items-center justify-between rounded-2xl border border-[#eadfd2] bg-white p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md active:scale-[0.99]"
+            >
+              <div>
+                <h3 className="font-semibold text-[#24150f]">
+                  {category.name}
+                </h3>
+
+                <p className="mt-1 text-xs text-gray-500">
+                  {category.items.length} menu items
+                </p>
+              </div>
+
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#651719] text-white transition group-hover:bg-[#8a2427]">
+                <ChevronRight size={18} />
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* No Results */}
+        {filteredCategories.length === 0 && (
+          <div className="rounded-2xl bg-white px-5 py-10 text-center shadow-sm">
+            <p className="font-semibold">No category found</p>
+
+            <p className="mt-1 text-sm text-gray-500">
+              Try searching another category.
+            </p>
+          </div>
+        )}
+      </section>
+
+      {/* Footer */}
+      <footer className="mt-8 border-t border-[#eadfd2] px-5 py-6 text-center">
+        <p className="text-sm font-semibold text-[#651719]">
+          MAX KITCHEN
+        </p>
+
+        <p className="mt-1 text-xs text-gray-500">
+          Digital Menu • Prices in SAR
+        </p>
+      </footer>
+    </main>
   );
 }
