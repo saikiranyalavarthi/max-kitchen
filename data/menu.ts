@@ -284,6 +284,7 @@ export const menuCategories: MenuCategory[] = [
         nameAr: "شوربة خضار حارة وحامضة",
         price: "14",
         calories: "100",
+        image: "/images/menu/soup.jpg",
       },
 
       {
@@ -292,6 +293,7 @@ export const menuCategories: MenuCategory[] = [
         nameAr: "شوربة خضار بالذرة",
         price: "14",
         calories: "120",
+        image: "/images/menu/soup.jpg",
       },
 
       {
@@ -300,6 +302,7 @@ export const menuCategories: MenuCategory[] = [
         nameAr: "شوربة خضار مانشو",
         price: "14",
         calories: "110",
+        image: "/images/menu/soup.jpg",
       },
 
       {
@@ -308,6 +311,7 @@ export const menuCategories: MenuCategory[] = [
         nameAr: "شوربة دجاج حارة",
         price: "16",
         calories: "140",
+        image: "/images/menu/soup.jpg",
       },
 
       {
@@ -316,6 +320,7 @@ export const menuCategories: MenuCategory[] = [
         nameAr: "شوربة دجاج بالذرة",
         price: "16",
         calories: "160",
+        image: "/images/menu/soup.jpg",
       },
 
       {
@@ -324,6 +329,7 @@ export const menuCategories: MenuCategory[] = [
         nameAr: "شوربة دجاج مانشو",
         price: "16",
         calories: "150",
+        image: "/images/menu/soup.jpg",
       },
     ],
   },
