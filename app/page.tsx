@@ -93,7 +93,10 @@ export default function Home() {
         setLanguage={setLanguage}
       />
 
-      <CategoryNav />
+  <CategoryNav
+  language={language}
+  currentCategory={firstCategory?.id}
+/>
 
       {firstCategory && (
         <MenuSection
