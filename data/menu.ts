@@ -526,6 +526,7 @@ export const menuCategories: MenuCategory[] = [
         nameAr: "سيخ كباب دجاج",
         price: "30",
         calories: "290",
+        image: "/images/menu/kebab.jpg",
       },
 
       {

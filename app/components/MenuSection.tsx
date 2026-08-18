@@ -14,27 +14,20 @@ export default function MenuSection({
 }: MenuSectionProps) {
   const isArabic = language === "ar";
 
-  const categoryName = isArabic
-    ? category.nameAr || category.name
-    : category.name;
-
   return (
-    <section className="mx-auto max-w-md px-4 py-5">
-      {/* Section Header */}
-      <div
-        className={`mb-5 ${
-          isArabic ? "text-right" : "text-left"
-        }`}
-      >
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#a77a32]">
-          {isArabic ? "قائمة الطعام" : "Menu"}
-        </p>
-
-        <h2 className="mt-1 text-2xl font-bold text-[#24150f]">
-          {categoryName}
+    <section
+      dir={isArabic ? "rtl" : "ltr"}
+      className="mx-auto w-full max-w-md bg-white"
+    >
+      {/* Category title */}
+      <div className="border-b border-[#eadfd2] px-3 py-3">
+        <h2 className="text-sm font-bold text-[#24150f]">
+          {isArabic
+            ? category.nameAr || category.name
+            : category.name}
         </h2>
 
-        <p className="mt-1 text-xs text-gray-500">
+        <p className="mt-0.5 text-[9px] text-gray-400">
           {category.items.length}{" "}
           {isArabic ? "عنصر" : "menu items"}
         </p>
@@ -42,21 +35,21 @@ export default function MenuSection({
 
       {/* Items */}
       {category.items.length === 0 ? (
-        <div className="rounded-3xl bg-white px-5 py-12 text-center shadow-sm">
+        <div className="px-5 py-12 text-center">
           <p className="font-semibold text-[#651719]">
             {isArabic
               ? "العناصر غير متوفرة حالياً"
               : "Items Coming Soon"}
           </p>
 
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-xs text-gray-500">
             {isArabic
               ? "سيتم تحديث هذه الفئة قريباً."
               : "This category will be updated soon."}
           </p>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div>
           {category.items.map((item) => (
             <MenuItem
               key={item.id}

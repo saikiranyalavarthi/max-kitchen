@@ -16,62 +16,64 @@ export default function Header({
   const isArabic = language === "ar";
 
   return (
-    <header className="bg-[#53061A] px-4 pb-6 pt-5 text-white shadow-lg">
-      <div className="mx-auto max-w-md">
+    <header className="bg-[#53061A] text-white shadow-md">
+      <div className="mx-auto max-w-md px-3 py-3">
+        {/* Top Row */}
         <div className="flex items-center justify-between gap-3">
-          {/* Logo */}
-          <div className="flex h-16 w-16 shrink-0 items-center justify-center    shadow-lg">
-            <img
-              src="/images/max-kitchen-logo.jpeg"
-              alt="Max Kitchen"
-              className="h-12 w-16 object-contain"
-            />
+          {/* Logo + Restaurant */}
+          <div className="flex min-w-0 items-center gap-2">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white">
+              <img
+                src="/images/max-kitchen-logo.jpeg"
+                alt="Max Kitchen"
+                className="h-full w-full object-contain"
+              />
+            </div>
+
+            <div className="min-w-0">
+              <h1 className="truncate text-sm font-extrabold tracking-wide">
+                MAX KITCHEN
+              </h1>
+
+              <p className="mt-0.5 text-[9px] text-[#e8c987]">
+                {isArabic
+                  ? "مطعم متعدد المأكولات"
+                  : "Multi-Cuisine Restaurant"}
+              </p>
+            </div>
           </div>
 
           {/* Language */}
-          <div className="flex items-center gap-1 rounded-full border border-[#d6ad63]/50 bg-white/10 p-1">
+          <div className="flex shrink-0 items-center rounded-full border border-[#d6ad63]/40 bg-white/10 p-0.5">
             <Languages
-              size={16}
+              size={13}
               className="mx-1 text-[#e8c987]"
             />
 
             <button
               type="button"
               onClick={() => setLanguage("en")}
-              className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
+              className={`rounded-full px-2.5 py-1 text-[9px] font-semibold transition ${
                 language === "en"
                   ? "bg-[#d6ad63] text-[#651719]"
                   : "text-white"
               }`}
             >
-              English
+              EN
             </button>
 
             <button
               type="button"
               onClick={() => setLanguage("ar")}
-              className={`rounded-full px-3 py-1.5 text-xs font-semibold transition ${
+              className={`rounded-full px-2.5 py-1 text-[9px] font-semibold transition ${
                 language === "ar"
                   ? "bg-[#d6ad63] text-[#651719]"
                   : "text-white"
               }`}
             >
-              العربية
+              AR
             </button>
           </div>
-        </div>
-
-        {/* Restaurant Name */}
-        <div className="mt-5 text-center">
-          <h1 className="text-3xl font-extrabold tracking-wide">
-            MAX KITCHEN
-          </h1>
-
-          <p className="mt-1 text-sm text-[#e8c987]">
-            {isArabic
-              ? "مطعم متعدد المأكولات"
-              : "Multi-Cuisine Restaurant"}
-          </p>
         </div>
       </div>
     </header>
