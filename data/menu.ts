@@ -482,7 +482,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "دجاج طري مطهو مع الفلفل الحار الطازج والبصل وصلصة هندية صينية لذيذة.",
       price: "35",
       calories: "300",
-      image: "/images/menu/chicken-chilli.jpg",
+      image: "/images/menu/chicken-chilli.webp",
     },
 
     {
@@ -548,7 +548,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "أصابع سمك ذهبية ومقرمشة بطبقة متبلة وغنية بالنكهة.",
       price: "40",
       calories: "450",
-      image: "/images/menu/finger-fish.jpg",
+      image: "/images/menu/finger-fish.webp",
     },
   ],
 },
@@ -615,7 +615,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "روبيان مقلي ذهبي ومقرمش بطبقة متبلة وغنية بالنكهة.",
       price: "40",
       calories: "500",
-      image: "/images/menu/golden-fried-prawns.jpg",
+      image: "/images/menu/golden-fried-prawns.avif",
     },
   ],
 },
@@ -1636,7 +1636,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "مياه شرب منعشة ومعبأة بحجم 330 مل.",
       price: "2",
       calories: "140",
-      image: "/images/menu/water-330ml.avif",
+      image: "/images/menu/water-330ml.png",
     },
 
     {
@@ -1646,7 +1646,7 @@ export const menuCategories: MenuCategory[] = [
       description: "Refreshing bottled drinking water, 1.5 Liter.",
       descriptionAr: "مياه شرب منعشة ومعبأة بحجم 1.5 لتر.",
       price: "3",
-      image: "/images/menu/water-1-5-liter.webp",
+      image: "/images/menu/water-1-5-liter.png",
     },
 
     {
