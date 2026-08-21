@@ -84,11 +84,12 @@ export default function CategoryNav({
              * Find first available image
              * inside category.
              */
-            const categoryImage =
-              category.items.find(
-                (item) => item.image
-              )?.image ||
-              "/images/menu/idli.jpg";
+           const categoryImage =
+  category.image ||
+  category.items.find(
+    (item) => item.image
+  )?.image ||
+  "/images/menu/idli.jpg";
 
             return (
               <Link
