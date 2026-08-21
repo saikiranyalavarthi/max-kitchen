@@ -28,71 +28,32 @@ export default function CategoryPage({
   const [search, setSearch] = useState("");
 
   const isArabic = language === "ar";
+const category = menuCategories.find(
+  (item) => item.id === categoryId
+);
 
-  const category = menuCategories.find(
-    (item) => item.id === categoryId
-  );
+/* =========================================
+   SEARCH ITEMS
+========================================= */
 
-  /* =========================================
-     CATEGORY NOT FOUND
-  ========================================= */
+const filteredCategories = useMemo(() => {
+  const searchText = search.trim().toLowerCase();
 
+  // Category not found
   if (!category) {
-    return (
-      <main
-        dir={isArabic ? "rtl" : "ltr"}
-        className="flex min-h-screen items-center justify-center bg-[#f8f5f0] px-5"
-      >
-        <div className="w-full max-w-md rounded-3xl bg-white p-8 text-center shadow-lg">
-          <h1 className="text-xl font-bold text-[#53061A]">
-            {isArabic
-              ? "الفئة غير موجودة"
-              : "Category Not Found"}
-          </h1>
-
-          <p className="mt-2 text-sm text-gray-500">
-            {isArabic
-              ? "الفئة المطلوبة غير موجودة."
-              : "The requested menu category was not found."}
-          </p>
-
-          <Link
-            href="/"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#53061A] px-6 py-3 text-sm font-semibold text-white"
-          >
-            {isArabic ? (
-              <>
-                <ArrowRight size={16} />
-                العودة إلى القائمة
-              </>
-            ) : (
-              <>
-                <ArrowLeft size={16} />
-                Back to Menu
-              </>
-            )}
-          </Link>
-        </div>
-      </main>
-    );
+    return [];
   }
 
-  /* =========================================
-     SEARCH ITEMS
-  ========================================= */
+  // No search → show selected category only
+  if (!searchText) {
+    return [category];
+  }
 
-  const filteredCategory = useMemo(() => {
-    const searchText = search
-      .trim()
-      .toLowerCase();
-
-    if (!searchText) {
-      return category;
-    }
-
-    const items = category.items.filter(
-      (item) => {
-        const name = item.name.toLowerCase();
+  // Search ALL categories and ALL items
+  return menuCategories
+    .map((cat) => {
+      const items = cat.items.filter((item) => {
+        const name = (item.name || "").toLowerCase();
 
         const nameAr = (
           item.nameAr || ""
@@ -102,19 +63,25 @@ export default function CategoryPage({
           item.description || ""
         ).toLowerCase();
 
+        const descriptionAr = (
+          item.descriptionAr || ""
+        ).toLowerCase();
+
         return (
           name.includes(searchText) ||
           nameAr.includes(searchText) ||
-          description.includes(searchText)
+          description.includes(searchText) ||
+          descriptionAr.includes(searchText)
         );
-      }
-    );
+      });
 
-    return {
-      ...category,
-      items,
-    };
-  }, [category, search]);
+      return {
+        ...cat,
+        items,
+      };
+    })
+    .filter((cat) => cat.items.length > 0);
+}, [category, search]);
 
   return (
     <main
@@ -179,10 +146,10 @@ export default function CategoryPage({
 
       {/* CATEGORY NAV */}
 
-      <CategoryNav
-        language={language}
-        currentCategory={category.id}
-      />
+   <CategoryNav
+  language={language}
+  currentCategory={category?.id}
+/>
 
       {/* BACK */}
 
@@ -207,10 +174,29 @@ export default function CategoryPage({
 
       {/* MENU */}
 
-      <MenuSection
-        category={filteredCategory}
-        language={language}
-      />
+   {filteredCategories.length > 0 ? (
+  filteredCategories.map((cat) => (
+    <MenuSection
+      key={cat.id}
+      category={cat}
+      language={language}
+    />
+  ))
+) : (
+  <div className="mx-auto max-w-md px-5 py-12 text-center">
+    <p className="text-sm font-semibold text-[#53061A]">
+      {isArabic
+        ? "لم يتم العثور على أطباق"
+        : "No dishes found"}
+    </p>
+
+    <p className="mt-1 text-[10px] text-gray-500">
+      {isArabic
+        ? "حاول البحث عن طبق آخر."
+        : "Try searching for another dish."}
+    </p>
+  </div>
+)}
 
       {/* FOOTER */}
 

@@ -998,7 +998,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "أرز أبيض مطهو على البخار يقدم مع دال خاتي التقليدي الغني بالنكهة والحموضة.",
       price: "16",
       calories: "200",
-      image: "/images/menu/white-rice-khatti-dal.jpg",
+      image: "/images/menu/white-rice-khatti-dal.webp",
     },
 
     {
@@ -1020,7 +1020,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "طبق لحم ضأن غني بالنكهة مطهو مع التوابل العطرية بطعم تقليدي غني.",
       price: "35",
       calories: "360",
-      image: "/images/menu/gost-hua-tala.jpg",
+      image: "/images/menu/gost-hua-tala.webp",
     },
   ],
 },
@@ -1206,7 +1206,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "عدس كريمي متبل بالتوابل العطرية والأعشاب وتتبيلة التادكا اللذيذة.",
       price: "20",
       calories: "180",
-      image: "/images/menu/dal-tadka.jpg",
+      image: "/images/menu/dal-tadka.webp",
     },
 
     {
@@ -1217,7 +1217,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "طبق عدس غني وكريمي مطهو ببطء مع التوابل العطرية.",
       price: "20",
       calories: "180",
-      image: "/images/menu/dak-makhni.jpg",
+      image: "/images/menu/dak-makhni.webp",
     },
 
     {
@@ -1250,7 +1250,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "كاري خضروات مشكلة غني وكريمي محضر بالتوابل العطرية.",
       price: "35",
       calories: "190",
-      image: "/images/menu/nauratan-khorma.jpg",
+      image: "/images/menu/nauratan-khorma.webp",
     },
 
     {
@@ -1404,7 +1404,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "لحم ضأن طري مطهو في مرق غني ولذيذ من السبانخ.",
       price: "40",
       calories: "320",
-      image: "/images/menu/mutton-palak.jpg",
+      image: "/images/menu/mutton-palak.webp",
     },
 
     {
@@ -1492,7 +1492,7 @@ export const menuCategories: MenuCategory[] = [
       description: "A hearty combination of crispy mutton fry, fragrant jeera rice and flavorful dal tadka.",
       descriptionAr: "مزيج شهي من لحم الضأن المقلي المقرمش وأرز الجيرا العطري ودال التادكا الغني بالنكهة.",
       price: "35",
-      image: "/images/menu/mutton-fry-jeera-dal.jpg",
+      image: "/images/menu/mutton-fry-jeera-dal.png",
     },
 
     {
@@ -1502,7 +1502,7 @@ export const menuCategories: MenuCategory[] = [
       description: "Crispy Chicken 65 served with fragrant jeera rice and flavorful dal tadka.",
       descriptionAr: "دجاج 65 مقرمش يقدم مع أرز الجيرا العطري ودال التادكا الغني بالنكهة.",
       price: "35",
-      image: "/images/menu/chicken-65-jeera-dal.jpg",
+      image: "/images/menu/chicken-65-jeera-dal.png",
     },
 
     {
@@ -1512,7 +1512,7 @@ export const menuCategories: MenuCategory[] = [
       description: "Flavorful chicken fry served with aromatic jeera rice and traditional dal tadka.",
       descriptionAr: "دجاج مقلي غني بالنكهة يقدم مع أرز الجيرا العطري ودال التادكا التقليدي.",
       price: "35",
-      image: "/images/menu/chicken-fry-jeera-dal.jpg",
+      image: "/images/menu/chicken-fry-jeera-dal.png",
     },
 
     {
@@ -1522,7 +1522,7 @@ export const menuCategories: MenuCategory[] = [
       description: "Crispy seasoned chicken served with flavorful rice for a satisfying combination.",
       descriptionAr: "دجاج مقرمش ومتبل يقدم مع أرز غني بالنكهة لوجبة شهية ومشبعة.",
       price: "30",
-      image: "/images/menu/crispy-chicken-rice.jpg",
+      image: "/images/menu/crispy-chicken-rice.png",
     },
   ],
 },
@@ -1546,7 +1546,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "3 قطع من كرات الحلوى الذهبية والطرية المنقوعة في شراب سكري حلو وعطري.",
       price: "15",
       calories: "180",
-      image: "/images/menu/gulab-jamun.jpg",
+      image: "/images/menu/gulab-jamun.avif",
     },
 
     {
@@ -1636,7 +1636,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "مياه شرب منعشة ومعبأة بحجم 330 مل.",
       price: "2",
       calories: "140",
-      image: "/images/menu/water-330ml.jpg",
+      image: "/images/menu/water-330ml.avif",
     },
 
     {
@@ -1646,7 +1646,7 @@ export const menuCategories: MenuCategory[] = [
       description: "Refreshing bottled drinking water, 1.5 Liter.",
       descriptionAr: "مياه شرب منعشة ومعبأة بحجم 1.5 لتر.",
       price: "3",
-      image: "/images/menu/water-1-5-liter.jpg",
+      image: "/images/menu/water-1-5-liter.webp",
     },
 
     {
@@ -1667,7 +1667,7 @@ export const menuCategories: MenuCategory[] = [
       description: "Refreshing Pepsi Diet soft drink with a lighter taste.",
       descriptionAr: "مشروب بيبسي دايت غازي ومنعش بطعم أخف.",
       price: "5",
-      image: "/images/menu/pepsi-diet.jpg",
+      image: "/images/menu/pepsi-diet.jpeg",
     },
 
     {
@@ -1711,7 +1711,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "مشروب كولا غازي بارد ومنعش.",
       price: "5",
       calories: "130",
-      image: "/images/menu/kinza-kola.jpg",
+      image: "/images/menu/kinza-kola.webp",
     },
 
     {
@@ -1721,7 +1721,7 @@ export const menuCategories: MenuCategory[] = [
       description: "Refreshing Kinza Diet cola soft drink with a lighter taste.",
       descriptionAr: "مشروب كينزا دايت غازي ومنعش بطعم أخف.",
       price: "5",
-      image: "/images/menu/kinza-diet.jpg",
+      image: "/images/menu/kinza-diet.webp",
     },
   ],
 },

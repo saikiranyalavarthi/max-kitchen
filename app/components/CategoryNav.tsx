@@ -100,7 +100,7 @@ export default function CategoryNav({
                     category.id
                   ] = element;
                 }}
-                className="group flex w-[55px] shrink-0 flex-col items-center"
+                className="group flex w-[65px] shrink-0 flex-col items-center"
               >
                 {/* IMAGE */}
 
@@ -138,25 +138,27 @@ export default function CategoryNav({
 
                 {/* NAME */}
 
-                <span
-                  className={`
-                    mt-1
-                    w-full
-                    truncate
-                    text-center
-                    text-[8px]
-                    font-semibold
-                    leading-3
-                    ${
-                      isActive
-                        ? "text-[#53061A]"
-                        : "text-[#4a403b]"
-                    }
-                  `}
-                >
-                  {categoryName}
-                </span>
+              {/* NAME */}
 
+<span
+  className={`
+    mt-1
+    w-[65px]
+    min-h-[24px]
+    whitespace-normal
+    break-words
+    text-center
+    text-[8px]
+    font-semibold
+    leading-[10px]
+    ${isActive
+      ? "text-[#53061A]"
+      : "text-[#4a403b]"
+    }
+  `}
+>
+  {categoryName}
+</span>
                 {/* ACTIVE LINE */}
 
                 <span
