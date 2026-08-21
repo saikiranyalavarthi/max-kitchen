@@ -95,7 +95,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "قطعتان من الإيدلي الطري المنقوع في سامبار هندي جنوبي غني بالنكهة.",
       price: "10",
       calories: "200",
-      image: "/images/menu/sambar-dip-idli.jpg",
+      image: "/images/menu/sambar-dip-idli.png",
     },
 
     {
@@ -106,7 +106,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "قطعتان من الفادا المقرمش مغمورتان في سامبار هندي جنوبي لذيذ.",
       price: "10",
       calories: "250",
-      image: "/images/menu/sambar-dip-vada.jpg",
+      image: "/images/menu/sambar-dip-vada.png",
     },
 
     {
@@ -117,7 +117,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "قطعتان من الإيدلي والفادا تقدمان معًا مع سامبار غني بالنكهة.",
       price: "10",
       calories: "300",
-      image: "/images/menu/idli-vada-dip-sambar.jpg",
+      image: "/images/menu/idli-vada-dip-sambar.png",
     },
 
     {
@@ -128,7 +128,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "3 قطع من بوندا ميسور الطرية والهشة والمقلية بسطح مقرمش.",
       price: "10",
       calories: "300",
-      image: "/images/menu/bonda.jpg",
+      image: "/images/menu/bonda.webp",
     },
 
     {
