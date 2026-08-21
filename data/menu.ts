@@ -1138,7 +1138,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "خبز هندي تقليدي طري ومخبوز طازجًا.",
       price: "2",
       calories: "180",
-      image: "/images/menu/roti.jpg",
+      image: "/images/menu/roti.webp",
     },
 
     {
