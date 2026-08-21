@@ -194,7 +194,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "دوسة مقرمشة محشوة بمزيج البطاطس المتبل والغني بالنكهة.",
       price: "12",
       calories: "250",
-      image: "/images/menu/masala-dosa.jpg",
+      image: "/images/menu/masala-dosa.avif",
     },
 
     {
@@ -216,7 +216,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "دوسة ذهبية مقرمشة مغطاة بسخاء بالزبدة الناعمة والغنية.",
       price: "12",
       calories: "250",
-      image: "/images/menu/butter-dosa.jpg",
+      image: "/images/menu/butter-dosa.webp",
     },
 
     {
@@ -227,7 +227,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "دوسة مقرمشة محشوة بالبانير الكريمي والغني بالنكهة لوجبة مشبعة.",
       price: "12",
       calories: "300",
-      image: "/images/menu/paneer-dosa.jpg",
+      image: "/images/menu/paneer-dosa.webp",
     },
 
     {
@@ -270,7 +270,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "دوسة رقيقة ومقرمشة ذات قوام شبكي محضرة من خليط السميد الغني بالنكهة.",
       price: "12",
       calories: "220",
-      image: "/images/menu/rava-dosa.jpg",
+      image: "/images/menu/rava-dosa.webp",
     },
 
     {
@@ -281,7 +281,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "مزيج لذيذ من الإيدلي الطري والدوسة المقرمشة في طبق إفطار واحد.",
       price: "12",
       calories: "220",
-      image: "/images/menu/idli-dosa.jpg",
+      image: "/images/menu/idli-dosa.avif",
     },
 
     {
@@ -292,7 +292,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "دوسة مقرمشة بتشكيل جميل تقدم بطريقة مميزة وشهية.",
       price: "12",
       calories: "200",
-      image: "/images/menu/flower-dosa.jpg",
+      image: "/images/menu/flower-dosa.png",
     },
   ],
 },
