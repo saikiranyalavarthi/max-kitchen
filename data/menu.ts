@@ -326,7 +326,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "شوربة خضار غنية بالنكهة تجمع بين الطعم الحار والحامض بشكل متوازن.",
       price: "14",
       calories: "100",
-      image: "/images/menu/veg-hot-sour-soup.jpg",
+      image: "/images/menu/veg-hot-sour-soup.webp",
     },
 
     {
@@ -359,7 +359,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "شوربة دجاج لذيذة تجمع بين قطع الدجاج الطرية والنكهات الحارة والحامضة.",
       price: "16",
       calories: "140",
-      image: "/images/menu/chicken-hot-sour-soup.jpg",
+      image: "/images/menu/chicken-hot-sour-soup.webp",
     },
 
     {
@@ -370,7 +370,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "شوربة دجاج دافئة محضرة بالدجاج الطري والذرة الحلوة.",
       price: "16",
       calories: "160",
-      image: "/images/menu/chicken-corn-soup.jpg",
+      image: "/images/menu/chicken-corn-soup.webp",
     },
 
     {
@@ -639,7 +639,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "كباب دجاج مفروم طري ومتبل بالتوابل العطرية ومشوي بشكل مثالي.",
       price: "30",
       calories: "290",
-      image: "/images/menu/chicken-seekh-kebab.jpg",
+      image: "/images/menu/chicken-seekh-kebab.avif",
     },
 
     {
@@ -650,7 +650,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "كباب لحم ضأن مفروم وطري ممزوج بالتوابل العطرية ومشوي على النار.",
       price: "35",
       calories: "320",
-      image: "/images/menu/mutton-seekh-kebab.jpg",
+      image: "/images/menu/mutton-seekh-kebab.avif",
     },
 
     {
@@ -694,7 +694,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "قطعتان من أفخاذ الدجاج الطرية متبلة بالتوابل العطرية ومشوية بشكل مثالي.",
       price: "35",
       calories: "360",
-      image: "/images/menu/chicken-tangdi.jpg",
+      image: "/images/menu/chicken-tangdi.webp",
     },
 
     {
@@ -761,7 +761,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "أرز مقلي غني بالنكهة مع الدجاج الطري والخضروات الطازجة.",
       price: "30",
       calories: "320",
-      image: "/images/menu/chicken-fried-rice.jpg",
+      image: "/images/menu/chicken-fried-rice.webp",
     },
 
     {
@@ -783,7 +783,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "نودلز مقلية مع البيض وتوابل عطرية غنية بالنكهة.",
       price: "25",
       calories: "380",
-      image: "/images/menu/egg-noodles.jpg",
+      image: "/images/menu/egg-noodles.webp",
     },
 
     {
@@ -794,7 +794,7 @@ export const menuCategories: MenuCategory[] = [
       descriptionAr: "نودلز شيزوان حارة مع الدجاج الطري والخضروات الغنية بالنكهة.",
       price: "25",
       calories: "360",
-      image: "/images/menu/chicken-schezwan-noodles.jpg",
+      image: "/images/menu/chicken-schezwan-noodles.webp",
     },
   ],
 },
@@ -1042,7 +1042,7 @@ export const menuCategories: MenuCategory[] = [
       nameAr: "لحم ضأن دوم برياني",
       description: "Aromatic basmati rice layered with tender mutton and slow-cooked with rich biryani spices.",
       descriptionAr: "أرز بسمتي عطري مع لحم ضأن طري مطهو ببطء مع توابل البرياني الغنية.",
-      image: "/images/menu/mutton-dum-biryani.jpg",
+      image: "/images/menu/mutton-dum-biryani.jpeg",
 
       variants: [
         {
@@ -1074,7 +1074,7 @@ export const menuCategories: MenuCategory[] = [
       nameAr: "دجاج دوم برياني",
       description: "Fragrant basmati rice layered with tender chicken and slow-cooked with traditional biryani spices.",
       descriptionAr: "أرز بسمتي عطري مع دجاج طري مطهو ببطء مع توابل البرياني التقليدية.",
-      image: "/images/menu/chicken-dum-biryani.jpg",
+      image: "/images/menu/chicken-dum-biryani.avif",
 
       variants: [
         {
